@@ -29,7 +29,8 @@ document.addEventListener('deviceready', function () {
                     title: 'Título da Notificação',
                     text: 'Este é o texto da notificação.',
                     foreground: true,
-                    trigger: { at: new Date(new Date().getTime() + 5 * 1000) } // Notificação será exibida em 5 segundos
+                    trigger: { at: new Date(new Date().getTime() + 5 * 1000) }, // Notificação será exibida em 5 segundos
+                    icon: 'res://ico'
                 });
         
                 alert('Notificação agendada para 5 segundos a partir de agora.');

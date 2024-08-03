@@ -8,6 +8,7 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <icon src="www/img/ico.png" />
 
         <!-- Configuração do plugin Social Sharing -->
     <feature name="SocialSharing">
