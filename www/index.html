@@ -2,31 +2,18 @@
 <html>
 <head>
     <title>Compartilhar Imagem</title>
-    <script src="cordova.js"></script>
-    <script>
-        document.addEventListener('deviceready', function () {
-
-            window.compartilhar = function() {
-                var imageUrl = 'https://www.gstatic.com/webp/gallery/2.jpg';
-                window.plugins.socialsharing.share(
-                    null,             // Mensagem (ou null se não precisar)
-                    null,             // Assunto (ou null se não precisar)
-                    imageUrl,         // URL da imagem
-                    null,             // URL do link (ou null se não precisar)
-                    function (success) {
-                        alert('Compartilhado com sucesso!');
-                    },
-                    function (error) {
-                        alert('Erro ao compartilhar: ' + error);
-                    }
-                );
-            };
-
-        }, false);
-    </script>
 </head>
 <body>
     <h1>Compartilhar Imagem</h1>
-    <button onclick="compartilhar()">Compartilhar</button>
+    
+    <div id="appVue">
+        <p>{{ nome }}</p>
+    <button @click="compartilhar()">Compartilhar</button>   
+    </div>
+
+    <!-- Scripts -->
+    <script src="cordova.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
